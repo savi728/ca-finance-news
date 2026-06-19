@@ -56,9 +56,9 @@
   <div class="top">
     <h1>🍁 加拿大财经快讯<small>Canada Finance News</small></h1>
     <span class="meta" id="meta"></span>
-    <button id="lang" title="语言 Language">中英</button>
-    <button id="theme" title="日/夜模式">🌙</button>
-    <button id="refresh" title="刷新 Refresh">↻</button>
+    <button id="lang" title="Language 语言">🌐 EN+中</button>
+    <button id="theme" title="Light / Dark 日夜模式">🌙</button>
+    <button id="refresh" title="Refresh 刷新">↻</button>
   </div>
   <nav id="nav"></nav>
 </header>
@@ -68,7 +68,7 @@
 const EN = { macro:'Macro · Rates', energy:'Energy · Oil & Gas', banks:'Banks · Finance', mining:'Mining · Materials', tech:'Tech', realty:'Real Estate', cannabis:'Cannabis', crypto:'Crypto' };
 const board = document.getElementById('board'), nav = document.getElementById('nav'), meta = document.getElementById('meta');
 let data = null;
-const LANGS = ['both','en','zh'], LANG_LABEL = { both:'中英', en:'EN', zh:'中文' };
+const LANGS = ['both','en','zh'], LANG_LABEL = { both:'EN+中', en:'English', zh:'中文' };
 
 // ---- 偏好(记住选择) ----
 let lang = localStorage.getItem('cfn-lang') || 'both';
@@ -79,7 +79,7 @@ function applyPrefs(){
   if(lang==='en') document.body.classList.add('lang-en');
   if(lang==='zh') document.body.classList.add('lang-zh');
   document.getElementById('theme').textContent = theme==='light' ? '☀️' : '🌙';
-  document.getElementById('lang').textContent = LANG_LABEL[lang];
+  document.getElementById('lang').textContent = '🌐 ' + LANG_LABEL[lang];
 }
 
 function ago(ts){ if(!ts) return ''; const s=(Date.now()-ts)/1000;
