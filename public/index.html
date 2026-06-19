@@ -73,6 +73,10 @@ const LANGS = ['both','en','zh'], LANG_LABEL = { both:'EN+中', en:'English', zh
 // ---- 偏好(记住选择) ----
 let lang = localStorage.getItem('cfn-lang') || 'both';
 let theme = localStorage.getItem('cfn-theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+// URL 参数可覆盖(用于分享预设链接,如 ?lang=en&theme=light)
+const qs = new URLSearchParams(location.search);
+if (LANGS.includes(qs.get('lang'))) lang = qs.get('lang');
+if (['light','dark'].includes(qs.get('theme'))) theme = qs.get('theme');
 function applyPrefs(){
   document.body.classList.toggle('light', theme==='light');
   document.body.classList.remove('lang-en','lang-zh');
