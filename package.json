@@ -1,0 +1,13 @@
+{
+  "name": "ca-finance-news",
+  "version": "1.0.0",
+  "private": true,
+  "description": "🍁 加拿大财经快讯 — 按行业板块聚合的中英对照新闻看板",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
