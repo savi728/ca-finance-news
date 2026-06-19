@@ -5,6 +5,8 @@
 **按行业板块聚合加拿大 / 北美财经新闻的中英对照快讯看板**
 *A bilingual (EN / 中文) Canadian financial-news board, aggregated by industry sector — NewsNow-style.*
 
+**简体中文** · [English](./README.en.md)
+
 [![Live Demo](https://img.shields.io/badge/Live-ca--finance--news.vercel.app-d63b3b?style=flat-square&logo=vercel&logoColor=white)](https://ca-finance-news.vercel.app)
 [![Deploy](https://img.shields.io/badge/Deploy-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com/new/clone?repository-url=https://github.com/savi728/ca-finance-news)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](./LICENSE)
